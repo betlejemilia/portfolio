@@ -1,0 +1,226 @@
+\documentclass[10pt]{mwart}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\newcommand{\RR}{{\mathbb R}}
+\newcommand{\NN}{{\mathbb N}}
+\newcommand{\ZZ}{{\mathbb Z}}
+\newcommand{\QQ}{{\mathbb Q}}
+\newcommand{\CC}{{\mathbb C}}
+\usepackage{hyperref}
+\usepackage{paralist}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks=true,
+    citecolor=violet,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=red,}
+\usepackage{pifont}
+\usepackage{enumerate}
+\usepackage{graphicx} 
+\theoremstyle{plain} \newtheorem{tw}{Twierdzenie}[section]
+\theoremstyle{plain} \newtheorem{lem}[tw]{Lemat}
+\theoremstyle{definition} \newtheorem{df}[tw]{Definicja}
+\title{Zadania matematyczne}
+\author{Emilia Betlej}
+\date{4 grudnia 2023}
+\begin{document}
+\maketitle
+\tableofcontents
+\section{Analiza matematyczna}
+\subsection{Funckje cyklometryczne}
+\begin{df}
+    Funkcją arccos nazywamy funkcję odwrotną do funkcji kosinus zawężonej do przedziału domkniętego \([0, \pi]\). Funckja arccos wyraże się wzorem: arccos = \((cos_{[0, \pi]})^-1\)\cite{odnośnik3}:
+\end{df}
+\begin{tw}
+   Jeśli a \(\in (0; 1)\) i \(x_1x_2\in \RR_+\) to \(\log_a{x_1} < \log_a{x_2}\iff x_1>x_2\).
+\end{tw}
+\begin{tw}
+   Jeśli a \(\in (1; +\infty)\) i \(x_1x_2\in \RR_+\) to \(\log_a{x_1} < \log_a{x_2}\iff x_1<x_2\)
+\end{tw}
+\subsection{Tabela wybranych wartości funkcji trygonometrycznych}
+\includegraphics[width=0.39\linewidth, angle=0]{tabela.jpg}
+\subsection{Zadanie 1}
+Rozwiąż nierówność: \(\arccos({log_4{x}-\frac{\pi}{6}})\) \(\geq\) \(\frac{\pi}{6}\)\\
+Założenie: \begin{align*}
+-1\leq\log_4{x}\leq1 \wedge x > 0\\
+\log_4{\frac{1}{4}}\leq\log_4{x}\leq\log_4{4} \wedge x\in(0, +\infty)\\
+x\geq\frac{1}{4} \wedge x\leq4 \wedge x\in(0, +\infty)\end{align*}
+ \begin{align*}D = [\frac{1}{4}, 4]\end{align*} Obliczenia:
+\begin{align}
+\arccos(log_4{x})-\frac{\pi}{6}\geq \frac{\pi}{6}\\
+\arccos(log_4{x})\geq \frac{\pi}{3}\\
+\arccos(log_4{x})\geq arccos(\frac{1}{2})\\
+\log_4{x}\leq \frac{1}{2}\\
+\log_4{x}\leq \log_4{2}\\
+x \leq 2\\
+x \in (-\infty, 2] \wedge x\in[\frac{1}{4}, 4]\\
+x\in [\frac{1}{4}, 2]
+\end{align}
+Odpowiedź: Rozwiązaniem nierówności jest \(x\in [\frac{1}{4}, 2]\).
+\section{Logika matematyczna}
+\subsection{Prawa logiczne}
+\begin{enumerate}[a)]
+   \item prawa łączności
+   \begin{itemize}
+       \item p \(\vee\) p \(\equiv\) p
+        \item p \(\wedge\) p \(\equiv\) p
+       \item p \(\vee\) q \(\equiv\) q \(\vee\) p
+       \item p \(\wedge\) q \(\equiv\) q \(\wedge\) p
+       \item p \(\vee\) (q \(\vee \) r) \(\equiv\) (p \(\vee \) q) \(\vee\) r
+       \item p \(\wedge\) (q \(\wedge\) r) \(\equiv\) (p \(\wedge\) q) \(\wedge\) r
+   \end{itemize}
+   \item prawo rozdzielności koniungcji względem alternatywy\cite{odnośnik1}
+   \begin{itemize}
+       \item p \(\wedge\) (q \(\vee\) r) \(\equiv\) (p \(\wedge\) q) \(\vee\) (p \(\wedge\) r)
+   \end{itemize}
+   \item prawo rozdzielności alternatywy względem koniungci
+     \begin{itemize}
+       \item p \(\vee\) (q \(\wedge\) r) \(\equiv\) (p \(\vee\) q) \(\wedge\) (p \(\vee\) r)
+   \end{itemize}
+   \item prawa de Morgana
+   \begin{itemize}
+       \item \(\neg\) (p \(\wedge\) q) \(\equiv\) \(\neg\) p \(\vee\) \(\neg\) q
+       \item \(\neg\) (p \(\vee\) q) \(\equiv\) \(\neg\) p \(\wedge\) \(\neg\) q
+   \end{itemize}
+   \item prawa absorbcji
+   \begin{itemize}
+       \item  p \(\vee\) (p \(\wedge\) q) \(\equiv\) p
+       \item  p \(\wedge\) (p \(\vee\) q) \(\equiv\) p
+   \end{itemize}
+   \item prawo podwójnego przeczenia
+   \begin{itemize}
+       \item \(\neg \neg\) p \(\equiv\) p
+   \end{itemize}
+   \item prawo eksportacji i importacji
+   \begin{itemize}
+       \item p \(\implies\) (q \(\implies\) r) \(\equiv\) (p \(\wedge\) q) \(\implies\) r
+   \end{itemize}
+   \item prawo kontrapozycji
+   \begin{itemize}
+       \item \(\neg\) p \(\implies\) \(\neg\) q \(\equiv\) g \(\implies\) p
+   \end{itemize}
+\end{enumerate}
+\subsection{Zadanie 2}
+Sprawdź czy poniższe zdanie jest tautologią.\\
+p \(\implies\) (q \(\implies\) (p \(\wedge\) q))\cite{odnośnik1}\\
+Rozwiązanie:\\
+Wykorzytam tabelkę, aby sprawdzić czy powyższe zdanie jest tautologią.\\
+\(
+\begin{array}{|c|c|c|c|c|}
+\hline\mbox{p} & q & p \wedge q & q \implies (p \wedge q ) & p \implies ( (p \wedge q ))\\\hline
+\mbox{1} & 1 & 1 & 1 & 1 \\\hline
+\mbox{0} & 1 & 0 & 0 & 1 \\\hline
+\mbox{1} & 0 & 0 & 1 & 1\\\hline
+\mbox{0} & 0& 0 & 1& 1 \\\hline
+\end{array}\)\\
+Zdanie p \(\implies\) (q \(\implies\) (p \(\wedge\) q)) zawsze przyjmuje warość logiczną "1". Wykazałam, że powyższe zdanie jest tautologią.\\
+Odpowiedź:\\ Zdanie p \(\implies\) (q \(\implies\) (p \(\wedge\) q)) jest tautologią.
+\subsection{Zadanie 3}
+Sprawdź, czy poniższy schemat rozumowania jest poprawny.\\
+\(\frac{p \implies q, \neg q \implies \neg r}{\neg p \implies (r \vee q)}\)\\
+Rozwiązanie:\\ Wykorzystam metodę "nie wprost". Zakładam, że istnieje takie wartościowanie, dla którego przesłanki są prawdziwe, a wniosek jest fałszywy, zatem:\\Wniosek: \(\neg p \implies (r \vee q)\) : 0\\
+\(\neg p\) : 1  \((r \vee q)\) : 0, z tego wynika, że p: 0, q: 0, r: 0.\\ Podstawiam wartośći p i r do przesłanek.\\Przesłanki:
+\(p \implies q: 1, \neg q \implies \neg r: 1, p: 0, r: 0\)\\
+q: 1, r: 0\\ Otrzymałam sprzeczność, zatem schemat rozumowania jest zawsze poprawny.\\Odpowiedź: Schemat rozumowania jest zawsze poprawny.
+\section{Algebra liniowa}
+\subsection{Macierze}
+\begin{df}
+    Macieżą nazywamy odwzorowanie {1,2, ..., m} \(\times\) {1,2, ..., n} \(\ni\) (i, j) \(\to a_{ij}\in\) x,\\gdzie m, n \(\in \NN\)\\ X - zbiór (elementami tego zbioru mogą być różne obiekty matematyczne, np. liczby, funkcje itd.)\cite{odnośnik2}
+\end{df}
+\begin{df}
+    Mówimy, że macierz A\(\in M_{m\times n}\) jest w postaci schodkowej, jeśli spełnia następujące warunki:\\
+    -każdy wiersz zerowy (składający się z samych zer) znajduje się poniżej każdego wiersza niezerowego\\
+    -w każdym wierszu pierwszy (licząc od lewej) niezerowy wyraz znajduje się w kolumnie stojącej na prawo od pierwszego niezerowego wyrazu wiersza poprzedniego.\cite{odnośnik2}
+\end{df}
+
+\subsection{Zadanie 4}
+Rozwiąż układ równań:
+$$\left\{\begin{array}{rcl}
+3x - 4y +z&=&9\\
+7x + 3y - 5z&=&4\\
+2x + 5y + 2z&=&9\\
+4x + 3y - z&=&1\\
+9x + 2y - 3z&=&13
+\end{array} \right.$$\cite{odnośnik2}
+Rozwiązanie:\\
+\(\begin{bmatrix}
+3&-4&1&9\\
+7&3&-5&4\\
+2&5&2&9\\
+4&3&-1&1\\
+9&2&-3&13\\
+\end{bmatrix}\) \(\to\)
+\(\begin{bmatrix}
+1&-4&3&9\\
+-5&3&7&4\\
+2&5&2&9\\
+-1&3&4&1\\
+-3&2&9&13\\
+\end{bmatrix}\) \(\to\)
+\(\begin{bmatrix}
+1&-4&3&9\\
+0&-17&22&49\\
+0&3&-4&-9\\
+0&-1&7&20\\
+0&-14&18&40\\
+\end{bmatrix}\) \(\to\)
+\(\begin{bmatrix}
+1&-4&3&9\\
+0&-1&7&20\\
+0&3&-4&-9\\
+0&-17&22&49\\
+0&-7&9&20\\
+\end{bmatrix}\) \(\to\)\\ \(\to\)
+\(\begin{bmatrix}
+1&-4&3&9\\
+0&-1&7&20\\
+0&0&17&51\\
+0&0&-27&291\\
+0&0&-40&-120\\
+\end{bmatrix}\) \(\to\)
+\(\begin{bmatrix}
+1&-4&3&9\\
+0&-1&7&20\\
+0&0&1&3\\
+0&0&1&3\\
+0&0&1&3\\
+\end{bmatrix}\) \(\to\)
+\(\begin{bmatrix}
+1&-4&3&9\\
+0&-1&7&20\\
+0&0&1&3
+\end{bmatrix}\)
+\\ \\ otrzymałam macierz w postaci schodkowej, zatem:
+$$\left\{\begin{array}{rcl}
+z - 4y +3x&=&9\\
+0 - y + 7x&=&20\\
+0 + 0 + x&=&3\\
+\end{array} \right.$$
+$$\left\{\begin{array}{rcl}
+x&=&3\\
+z - 4y +3x&=&9\\
+- y + 21&=&20\\
+\end{array} \right.$$
+$$\left\{\begin{array}{rcl}
+x&=&3\\
+y&=&1\\
+z - 4 +9&=&9\\
+\end{array} \right.$$
+$$\left\{\begin{array}{rcl}
+x&=&3\\
+y&=&1\\
+z&=&4\\
+\end{array} \right.$$
+Odpowiedź: x = 3, y = 4, z = 1.
+\begin{thebibliography}{1293}
+    \hypertarget{odnośnik1}{\bibitem{odnośnik1} 
+Edward Nieznański: "Logika", 2011, Wyd. C.H. Beck.}
+     \hypertarget{odnośnik2}{\bibitem{odnośnik2} Jerzy Topp: "Algebra liniowa", 2015, Wydawnictwo Uniwersytetu Gdańskiego.}
+     \hypertarget{odnośnik3}{\bibitem{odnośnik3} Włodzimierz Krysicki, Lech Włodarski: "Analiza Matematyczna w Zadaniach. Część 1", 2008, Wydawnictwo Naukowe PWN.}
+\end{thebibliography}
+\end{document}
